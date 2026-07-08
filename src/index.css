@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Yekan";
+  src: url("/src/assets/fonts/Yekan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KoodakBold";
+  src: url("/src/assets/fonts/KoodakBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-yekan {
+  font-family: "Yekan", sans-serif;
+}
+.font-koodakBold {
+  font-family: "KoodakBold", sans-serif;
+}
+body{
+    font-family:"Yekan" ,"sans-serif" ;
+}
