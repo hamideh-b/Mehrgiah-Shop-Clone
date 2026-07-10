@@ -13,11 +13,11 @@ import ScrollToTop from "../Components/ScrollToTop/ScrollToTop";
 import AccountSideBar from "../Components/AccountSideBar/AccountSideBar";
 import CreateAccount from "../Pages/CreateAccount/CreateAccount";
 import Shop from "../Pages/Shop/Shop";
-import ProdutPage from "../Pages/ProdutPage/produtPage";
 import CartSideBar from "../Components/CartSideBar/CartSideBar";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import Search from "../Pages/Search/Search";
+import ProdutPage from "../Pages/ProdutPage/produtPage";
 
 const App = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
