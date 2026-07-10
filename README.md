@@ -4,6 +4,10 @@ A responsive frontend implementation inspired by the Mehrgiah website, built for
 
 > **Note:** This project is a personal educational practice and is not affiliated with the original Mehrgiah website.
 
+## Live Demo
+
+🌐 https://mehrgiah-shop-clone.hamideh1.workers.dev/
+
 ## Features
 
 - Responsive design (Mobile & Desktop)

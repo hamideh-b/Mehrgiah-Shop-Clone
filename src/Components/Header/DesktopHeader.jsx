@@ -5,6 +5,7 @@ import Skeleton from "react-loading-skeleton";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { useSideBar } from "../SideBarProvider/SideBarProvider";
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
 const DesktopHeader = ({
   navBar,
@@ -35,13 +36,13 @@ const DesktopHeader = ({
           </Link>
         </div>
 
-        <div>
+        <div className="relative">
           <input
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 searchHandler();
-                setSearch("")
+                setSearch("");
               }
             }}
             value={search}
@@ -50,6 +51,15 @@ const DesktopHeader = ({
             placeholder="جستوجو"
             className="text-right p-2 border border-gray-300 rounded-md outline-none"
           />
+          <button
+            onClick={() => {
+              searchHandler();
+              setSearch("");
+            }}
+            className="p-2  absolute top-1/2  left-3 -translate-y-1/2 cursor-pointer hover:bg-gray-200 rounded-full"
+          >
+            <FaSearch className="text-gray-500" />
+          </button>
         </div>
 
         <div className="flex justify-around items-center px-4 gap-10">

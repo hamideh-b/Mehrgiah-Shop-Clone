@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import SideBarDrawer from "../SideBarDrawer/SideBarDrawer";
 import Skeleton from "react-loading-skeleton";
+import { FaSearch } from "react-icons/fa";
 
 const MobileSideBar = () => {
   const { data, loading, error } = useSelector((state) => state.menu);
@@ -24,13 +25,13 @@ const MobileSideBar = () => {
         open={sideBar === "menu"}
         onClose={() => setSideBar(null)}
       >
-        <div>
+        <div className="relative">
           <input
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 searchHandler();
-                setSearch("")
+                setSearch("");
               }
             }}
             value={search}
@@ -38,6 +39,15 @@ const MobileSideBar = () => {
             placeholder="جستوجو"
             className="block w-full text-right p-4   outline-none"
           />
+          <button
+            onClick={() => {
+              searchHandler();
+              setSearch("");
+            }}
+            className="p-2  absolute top-1/2  left-3 -translate-y-1/2 cursor-pointer hover:bg-gray-200 rounded-full"
+          >
+            <FaSearch className="text-gray-500" />
+          </button>
         </div>
         <div className="flex items-center cursor-pointer">
           <div
